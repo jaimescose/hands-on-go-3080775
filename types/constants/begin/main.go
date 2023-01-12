@@ -9,7 +9,8 @@ import (
 // declare a constant representing pi
 const pi = 3.14159
 
-// declare a rune constant for the letter 'a'
+// declare a rune constant with explicit type for the letter 'a'
+// rune is an alias for the int32 type
 const a rune = 'a'
 
 func main() {
@@ -19,5 +20,5 @@ func main() {
 	fmt.Printf("a: %c - %T\n", a, a)
 
 	// use unicode package to confirm that the rune is a letter
-	unicode.IsLetter(a)
+	fmt.Println(unicode.IsLetter(a))
 }
